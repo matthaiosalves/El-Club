@@ -1,32 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/OuGCmf1.png">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="description" content="El Club - Habbo - Digital Marketing.">
-    <meta property="og:site_name" content="El Club - Habbo.">
-    <meta property="og:title" content="El Club Habbo">
-    <meta property="og:url" content="https://elclubhb.life/">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:description" content="Company specializing in Digital Marketing and Advertising.">
-    <meta property="og:image" content="https://i.imgur.com/Hbfb8Od.png">
-    <meta name="theme-color" content="#a626a6">
-	<title>Welcome to the El Club</title>
-	<link rel="stylesheet" type="text/css" href="car.css"/>
-</head>
-<body>
-	<audio src="September.mp3" autoplay loop>
-		Dont have support for audio tag
-	</audio>
-	<div class="night">
-		<a href="http://elclubhb.life/">El Club</a>
-		<div class="surface"></div>
-		<div class="car">
-			<img src="Img_06.png"/>
+<html lang="pt-BR">
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/OuGCmf1.png">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="El Club - Habbo - Digital Marketing.">
+		<meta property="og:site_name" content="El Club - Habbo.">
+		<meta property="og:title" content="El Club Habbo">
+		<meta property="og:url" content="https://elclubhb.life/">
+		<meta property="og:locale" content="pt_BR">
+		<meta property="og:description" content="Company specializing in Digital Marketing and Advertising.">
+		<meta property="og:image" content="https://i.imgur.com/Hbfb8Od.png">
+		<meta name="theme-color" content="#a626a6">
+		<title>Welcome to the El Club</title>
+		<link rel="stylesheet" type="text/css" href="car.css"/>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<style type="text/css">
+			
+		</style>
+		<audio src="September.mp3" autoplay loop>
+			Dont have support for audio tag
+		</audio>
+		
+		<div class="alertaa">
+			<div class="alerta">
+				<h3>Deseja escutar a música?</h3>
+				<div class="btn-group">
+					<button type="button" data-tipo="1" >Sim</button>
+					<button type="button" data-tipo="0" >Não</button>
+				</div>
+			</div>
 		</div>
-	</div>
-</body>
+		<button onclick="play();">Song <i class="fa fa-volume-up"></i></button>
+		<div class="night">
+			<a href="http://elclubhb.life/">El Club</a>
+			<div class="surface"></div>
+			<div class="car">
+				<img src="Img_06.png"/>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			const audio = document.querySelector('audio'),
+			buttons = document.querySelectorAll('.alerta button'),
+			alertaArea = document.querySelector('.alertaa')
+
+			buttons.forEach(button => {
+				button.addEventListener('click', () => {
+					let tipo = parseInt(button.getAttribute('data-tipo'))
+					if(tipo) {
+						audio.play()
+					}
+					alertaArea.style.display = 'none'
+				})
+			})
+
+			alertaArea.addEventListener('click', (e) => {
+				if(e.target.className === 'alertaa') {
+				alertaArea.style.display = 'none'
+				}
+			})
+
+			// fuivlw
+
+			// function play(){
+				// 	if(confirm("Deseja escutar a música?")){
+						// 		const button = document.querySelector('button')
+						// 		button.addEventListener('click', () => {
+								// 			audio.play()
+						// 		});
+				// 	}
+			// }
+			// button.addEventListener('click', () => {
+				// 	audio.play()
+			// })
+			// window.onload = () => {
+				// 	if(confirm("Deseja escutar a música?")){
+								// 		audio.play()
+						// 		// button.addEventListener('click', () => {
+						// 		// });
+				// 	}
+			// }
+		</script>
+	</body>
 </html>
