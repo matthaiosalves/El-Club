@@ -73,6 +73,7 @@ a
 	background-size: 400%;
 	border-radius: 30px;
 	z-index: 1;
+	animation: animate 8s linear infinite;
 }
 a:hover
 {
@@ -112,7 +113,41 @@ a:hover:before
 
 }
 
-#song {
-	height: 25px;
-	width: 150px;
+button {
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	animation: animate 8s linear infinite;
+	z-index: 1;
+	background-size: 400%;
+	color: white;
+	font-family: 'Architects Daughter', cursive;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.alerta {
+	background: #fff;
+    z-index: 9999;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 260px;
+    width: 100%;
+    height: 110px;
+    border-radius: 3px;
+}
+
+.alertaa {
+	position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
